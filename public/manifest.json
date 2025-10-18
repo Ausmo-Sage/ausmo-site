@@ -1,0 +1,17 @@
+{
+  "name": "Ausmo AAC",
+  "short_name": "Ausmo AAC",
+  "description": "AAC communication app with custom image uploads, express pages, and full accessibility support",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/images/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

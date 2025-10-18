@@ -1,0 +1,39 @@
+{
+  "name": "ausmo-landing",
+  "version": "1.0.0",
+  "description": "Landing page for Ausmo AAC - Empowering Communication for Everyone",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "^15.5.6"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  },
+  "keywords": [
+    "AAC",
+    "communication",
+    "autism",
+    "accessibility",
+    "mobile-app",
+    "speech-therapy"
+  ],
+  "author": "Ausmo Team",
+  "license": "MIT"
+}
