@@ -10,11 +10,6 @@
       "runtime": "nodejs18.x"
     }
   },
-  "env": {
-    "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME": "@cloudinary-cloud-name",
-    "NEXT_PUBLIC_CLOUDINARY_API_KEY": "@cloudinary-api-key",
-    "CLOUDINARY_API_SECRET": "@cloudinary-api-secret"
-  },
   "headers": [
     {
       "source": "/(.*)",
