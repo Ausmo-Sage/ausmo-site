@@ -49,7 +49,7 @@ export default function FAQ() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Who can use Ausmo AAC?</h3>
-                  <p className="text-black dark:text-gray-200">Ausmo AAC is designed for children and adults with autism, speech delays, or other communication difficulties. It's also used by families, schools, and therapists.</p>
+                  <p className="text-black dark:text-gray-200">Ausmo AAC is designed for children and adults with autism, speech delays, or other communication difficulties. It&apos;s also used by families, schools, and therapists.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Is Ausmo AAC free?</h3>
@@ -68,7 +68,7 @@ export default function FAQ() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-2">How do I add custom images?</h3>
-                  <p className="text-black dark:text-gray-200">You can add custom images by tapping the camera icon in the app, taking a photo, or selecting from your device's photo library.</p>
+                  <p className="text-black dark:text-gray-200">You can add custom images by tapping the camera icon in the app, taking a photo, or selecting from your device&apos;s photo library.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Can I record my own voice?</h3>
@@ -106,7 +106,7 @@ export default function FAQ() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Is Ausmo AAC COPPA compliant?</h3>
-                  <p className="text-black dark:text-gray-200">Yes, Ausmo AAC is fully compliant with COPPA (Children's Online Privacy Protection Act) to protect children's privacy.</p>
+                  <p className="text-black dark:text-gray-200">Yes, Ausmo AAC is fully compliant with COPPA (Children&apos;s Online Privacy Protection Act) to protect children&apos;s privacy.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-black dark:text-white mb-2">Can I delete my data?</h3>
@@ -120,7 +120,7 @@ export default function FAQ() {
           <div className="mt-16 text-center">
             <h2 className="text-3xl font-bold text-black dark:text-white mb-8">Still Have Questions?</h2>
             <p className="text-lg text-black dark:text-gray-200 mb-8 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help.
+              Can&apos;t find what you&apos;re looking for? Our support team is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

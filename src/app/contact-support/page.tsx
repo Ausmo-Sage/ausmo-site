@@ -30,7 +30,7 @@ export default function ContactSupport() {
             Contact Support
           </h1>
           <p className="text-xl text-black dark:text-gray-100 max-w-2xl mx-auto leading-relaxed font-medium">
-            We're here to help! Get in touch with our support team for assistance with Ausmo AAC
+            We&apos;re here to help! Get in touch with our support team for assistance with Ausmo AAC
           </p>
         </div>
       </section>
@@ -55,7 +55,7 @@ export default function ContactSupport() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Emergency Support</h3>
-                  <p>For urgent issues, please mark your email as "URGENT"</p>
+                  <p>For urgent issues, please mark your email as &quot;URGENT&quot;</p>
                 </div>
               </div>
             </div>

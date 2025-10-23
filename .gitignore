@@ -318,3 +318,4 @@ temp/
 #
 # If you need to ignore additional files, add them above with comments
 # explaining why they should be ignored.
+.vercel
