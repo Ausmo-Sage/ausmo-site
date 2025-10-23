@@ -4,10 +4,19 @@ const nextConfig: NextConfig = {
   // Optimize for Vercel deployment
   output: 'standalone',
   
-  // Image optimization for Cloudinary
+  // Image optimization
   images: {
-    domains: ['res.cloudinary.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
     formats: ['image/webp', 'image/avif'],
+    // Enable local image optimization
+    unoptimized: false,
   },
   
   // Security headers (Vercel will handle these via vercel.json)
@@ -65,7 +74,7 @@ const nextConfig: NextConfig = {
   
   // Performance optimizations
   experimental: {
-    optimizeCss: true,
+    // optimizeCss: true, // Removed - causing critters module error
   },
   
   // Compression
