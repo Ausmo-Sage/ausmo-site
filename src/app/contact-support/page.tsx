@@ -13,9 +13,9 @@ export default function ContactSupport() {
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex space-x-8">
-                <Link href="/#features" className="text-black dark:text-white hover:text-coral-600 dark:hover:text-coral-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
-                <Link href="/#download" className="text-black dark:text-white hover:text-teal-600 dark:hover:text-teal-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
-                <Link href="/contact-support" className="text-black dark:text-white hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
+                <Link href="/#features" className="text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
+                <Link href="/#download" className="text-black dark:text-white hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
+                <Link href="/contact-support" className="text-black dark:text-white hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
               </div>
               <ThemeToggle />
             </div>
@@ -40,7 +40,7 @@ export default function ContactSupport() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Contact Information */}
-            <div className="bg-gradient-to-br from-coral-50 to-coral-100 dark:from-coral-900/20 dark:to-coral-800/20 p-8 rounded-3xl shadow-medium border border-coral-200/50 dark:border-coral-700/30">
+            <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium border border-primary-200/50 dark:border-primary-700/30">
               <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Get in Touch</h2>
               <div className="space-y-4 text-black dark:text-gray-200">
                 <div>
@@ -61,19 +61,19 @@ export default function ContactSupport() {
             </div>
 
             {/* Quick Help */}
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/20 dark:to-teal-800/20 p-8 rounded-3xl shadow-medium border border-teal-200/50 dark:border-teal-700/30">
+            <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-8 rounded-3xl shadow-medium border border-secondary-200/50 dark:border-secondary-700/30">
               <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Quick Help</h2>
               <div className="space-y-4">
                 <Link 
                   href="/faq"
-                  className="block bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-teal-200 dark:border-teal-700"
+                  className="block bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-secondary-200 dark:border-secondary-700"
                 >
                   <h3 className="font-semibold">Frequently Asked Questions</h3>
                   <p className="text-sm text-gray-700 dark:text-gray-300">Find quick answers to common questions</p>
                 </Link>
                 <Link 
                   href="/help"
-                  className="block bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-teal-200 dark:border-teal-700"
+                  className="block bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-secondary-200 dark:border-secondary-700"
                 >
                   <h3 className="font-semibold">Help Center</h3>
                   <p className="text-sm text-gray-700 dark:text-gray-300">Comprehensive guides and tutorials</p>
@@ -83,7 +83,7 @@ export default function ContactSupport() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-8 rounded-3xl shadow-medium border border-purple-200/50 dark:border-purple-700/30">
+          <div className="bg-gradient-to-br from-lavender-50 to-lavender-100 dark:from-lavender-900/20 dark:to-lavender-800/20 p-8 rounded-3xl shadow-medium border border-lavender-200/50 dark:border-lavender-700/30">
             <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Send us a Message</h2>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -94,7 +94,7 @@ export default function ContactSupport() {
                     id="name" 
                     name="name" 
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="Your name"
                   />
                 </div>
@@ -105,7 +105,7 @@ export default function ContactSupport() {
                     id="email" 
                     name="email" 
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -117,7 +117,7 @@ export default function ContactSupport() {
                     id="subject" 
                     name="subject" 
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="Brief description of your issue"
                   />
               </div>
@@ -128,14 +128,14 @@ export default function ContactSupport() {
                     name="message" 
                     rows={6}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-purple-500 dark:focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 dark:focus:ring-purple-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
                     placeholder="Please describe your issue or question in detail..."
                   ></textarea>
               </div>
               <div>
                 <button 
                   type="submit"
-                  className="bg-purple-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-purple-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-purple-800"
+                  className="bg-lavender-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-lavender-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-lavender-800"
                 >
                   Send Message
                 </button>
@@ -155,7 +155,7 @@ export default function ContactSupport() {
               </Link>
               <Link
                 href="/accessibility"
-                className="bg-teal-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-teal-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-teal-800"
+                className="bg-secondary-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-secondary-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-secondary-800"
               >
                 Accessibility Statement
               </Link>

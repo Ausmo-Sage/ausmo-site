@@ -20,9 +20,9 @@ export default function COPPACompliance() {
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex space-x-8">
-                <Link href="/#features" className="text-black dark:text-white hover:text-coral-600 dark:hover:text-coral-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
-                <Link href="/#download" className="text-black dark:text-white hover:text-teal-600 dark:hover:text-teal-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
-                <Link href="/contact-support" className="text-black dark:text-white hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
+                <Link href="/#features" className="text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
+                <Link href="/#download" className="text-black dark:text-white hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
+                <Link href="/contact-support" className="text-black dark:text-white hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
               </div>
               <ThemeToggle />
             </div>
@@ -139,8 +139,8 @@ export default function COPPACompliance() {
               <li><strong>Improvement:</strong> To improve our services (using anonymized data)</li>
             </ul>
             
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 dark:border-yellow-400 p-4 mb-4">
-              <p className="text-yellow-800 dark:text-yellow-200 font-semibold">
+            <div className="bg-accent-50 dark:bg-accent-900/20 border-l-4 border-accent-500 dark:border-accent-400 p-4 mb-4">
+              <p className="text-accent-800 dark:text-accent-200 font-semibold">
                 We never use children's information for advertising, marketing, or behavioral tracking.
               </p>
             </div>

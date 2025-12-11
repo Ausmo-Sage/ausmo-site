@@ -13,9 +13,9 @@ export default function HelpCenter() {
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex space-x-8">
-                <Link href="/#features" className="text-black dark:text-white hover:text-coral-600 dark:hover:text-coral-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
-                <Link href="/#download" className="text-black dark:text-white hover:text-teal-600 dark:hover:text-teal-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
-                <Link href="/#support" className="text-black dark:text-white hover:text-purple-600 dark:hover:text-purple-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
+                <Link href="/#features" className="text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
+                <Link href="/#download" className="text-black dark:text-white hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
+                <Link href="/#support" className="text-black dark:text-white hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
               </div>
               <ThemeToggle />
             </div>
@@ -40,52 +40,75 @@ export default function HelpCenter() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Getting Started */}
-            <div className="bg-gradient-to-br from-coral-50 to-coral-100 dark:from-coral-900/20 dark:to-coral-800/20 p-8 rounded-3xl shadow-medium border border-coral-200/50 dark:border-coral-700/30">
+            <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium border border-primary-200/50 dark:border-primary-700/30">
               <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Getting Started</h2>
               <ul className="space-y-3 text-black dark:text-gray-200">
                 <li>• How to download and install Ausmo AAC</li>
-                <li>• Setting up your first communication board</li>
-                <li>• Adding custom images and photos</li>
+                <li>• Setting up your first child profile</li>
+                <li>• Creating your first communication board</li>
+                <li>• Adding custom images and symbols</li>
                 <li>• Recording your first audio messages</li>
               </ul>
             </div>
 
-            {/* Features & Usage */}
-            <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/20 dark:to-teal-800/20 p-8 rounded-3xl shadow-medium border border-teal-200/50 dark:border-teal-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Features & Usage</h2>
+            {/* Multi-Role Setup */}
+            <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-8 rounded-3xl shadow-medium border border-secondary-200/50 dark:border-secondary-700/30">
+              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Multi-Role Setup</h2>
               <ul className="space-y-3 text-black dark:text-gray-200">
-                <li>• Using Express Pages for quick communication</li>
-                <li>• Customizing symbol library</li>
-                <li>• Text-to-speech settings and voices</li>
-                <li>• Accessibility features and options</li>
+                <li>• Understanding Parent, Teacher, Therapist roles</li>
+                <li>• Switching between roles seamlessly</li>
+                <li>• Setting up collaborative care teams</li>
+                <li>• Managing multiple child profiles</li>
+                <li>• Admin role and system management</li>
               </ul>
             </div>
 
-            {/* Troubleshooting */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-8 rounded-3xl shadow-medium border border-purple-200/50 dark:border-purple-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Troubleshooting</h2>
+            {/* Team Collaboration */}
+            <div className="bg-gradient-to-br from-lavender-50 to-lavender-100 dark:from-lavender-900/20 dark:to-lavender-800/20 p-8 rounded-3xl shadow-medium border border-lavender-200/50 dark:border-lavender-700/30">
+              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Team Collaboration</h2>
               <ul className="space-y-3 text-black dark:text-gray-200">
-                <li>• App not responding or crashing</li>
-                <li>• Audio not playing correctly</li>
-                <li>• Images not loading properly</li>
-                <li>• Syncing issues between devices</li>
+                <li>• Real-time messaging between team members</li>
+                <li>• Sharing notes and observations</li>
+                <li>• Collaborative goal setting and tracking</li>
+                <li>• Progress updates and notifications</li>
+                <li>• Offline sync and data consistency</li>
               </ul>
             </div>
 
-            {/* Support Contact */}
-            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 dark:from-yellow-900/20 dark:to-yellow-800/20 p-8 rounded-3xl shadow-medium border border-yellow-200/50 dark:border-yellow-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Contact Support</h2>
-              <div className="space-y-3 text-black dark:text-gray-200">
-                <p><strong>Email:</strong> support@ausmoapp.com</p>
-                <p><strong>Response Time:</strong> Within 24 hours</p>
-                <p><strong>Available:</strong> Monday - Friday, 9 AM - 5 PM EST</p>
-                <Link 
-                  href="/contact-support"
-                  className="inline-block mt-4 bg-teal-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-teal-700 transition-colors"
-                >
-                  Contact Support
-                </Link>
-              </div>
+            {/* Goals & Progress Management */}
+            <div className="bg-gradient-to-br from-accent-50 to-accent-100 dark:from-accent-900/20 dark:to-accent-800/20 p-8 rounded-3xl shadow-medium border border-accent-200/50 dark:border-accent-700/30">
+              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Goals & Progress</h2>
+              <ul className="space-y-3 text-black dark:text-gray-200">
+                <li>• Creating SMART goals and IEP objectives</li>
+                <li>• Treatment plan development and tracking</li>
+                <li>• Progress visualization and analytics</li>
+                <li>• Exporting reports for documentation</li>
+                <li>• Goal templates and best practices</li>
+              </ul>
+            </div>
+
+            {/* Symbol Library Management */}
+            <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium border border-primary-200/50 dark:border-primary-700/30">
+              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Symbol Library</h2>
+              <ul className="space-y-3 text-black dark:text-gray-200">
+                <li>• Using OpenSymbols, Bliss, and Mulberry libraries</li>
+                <li>• Custom symbol upload and management</li>
+                <li>• Favorites system and quick access</li>
+                <li>• Symbol search and categorization</li>
+                <li>• Symbol sizing and color themes</li>
+              </ul>
+            </div>
+
+            {/* Security & Privacy */}
+            <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-8 rounded-3xl shadow-medium border border-secondary-200/50 dark:border-secondary-700/30">
+              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Security & Privacy</h2>
+              <ul className="space-y-3 text-black dark:text-gray-200">
+                <li>• PIN security and biometric authentication</li>
+                <li>• Data encryption and privacy settings</li>
+                <li>• HIPAA, FERPA, and COPPA compliance</li>
+                <li>• Managing data sharing permissions</li>
+                <li>• Backup and data recovery options</li>
+              </ul>
             </div>
           </div>
 
@@ -101,7 +124,7 @@ export default function HelpCenter() {
               </Link>
               <Link
                 href="/privacy"
-                className="bg-teal-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-teal-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-teal-800"
+                className="bg-secondary-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-secondary-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-secondary-800"
               >
                 Privacy Policy
               </Link>

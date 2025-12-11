@@ -54,7 +54,7 @@ const nextConfig: NextConfig = {
     ];
   },
   
-  // Redirect HTTP to HTTPS (handled by Vercel/Cloudflare)
+  // Redirect HTTP to HTTPS and www to non-www (handled by Vercel/Cloudflare)
   async redirects() {
     return [
       {
@@ -64,6 +64,17 @@ const nextConfig: NextConfig = {
             type: 'header',
             key: 'x-forwarded-proto',
             value: 'http',
+          },
+        ],
+        destination: 'https://ausmoapp.com/:path*',
+        permanent: true,
+      },
+      {
+        source: '/(.*)',
+        has: [
+          {
+            type: 'host',
+            value: 'www.ausmoapp.com',
           },
         ],
         destination: 'https://ausmoapp.com/:path*',

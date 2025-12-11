@@ -1,10 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Outfit } from 'next/font/google'
 import './globals.css'
 import CookieConsent from '../components/CookieConsent'
 import { ThemeProvider } from '../components/ThemeProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
+const outfit = Outfit({ 
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ausmoapp.com'),
@@ -92,7 +103,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${outfit.variable} ${inter.className}`}>
         <ThemeProvider>
           {children}
           <CookieConsent />

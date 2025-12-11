@@ -1,7 +1,7 @@
 {
   "name": "ausmo-landing",
   "version": "1.0.0",
-  "description": "Landing page for Ausmo AAC - Empowering Communication for Everyone",
+  "description": "Landing page for Ausmo AAC - Multi-role collaborative platform empowering communication through Parents, Teachers, and Therapists working together",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -35,7 +35,16 @@
     "autism",
     "accessibility",
     "mobile-app",
-    "speech-therapy"
+    "speech-therapy",
+    "multi-role",
+    "collaborative-care",
+    "real-time-collaboration",
+    "therapy-platform",
+    "IEP-goals",
+    "treatment-plans",
+    "HIPAA-compliant",
+    "FERPA-compliant",
+    "COPPA-compliant"
   ],
   "author": "Ausmo Team",
   "license": "MIT"
