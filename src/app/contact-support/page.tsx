@@ -1,7 +1,53 @@
+'use client';
+
+import { useState, FormEvent } from 'react';
 import Link from 'next/link'
 import ThemeToggle from '../../components/ThemeToggle'
 
 export default function ContactSupport() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
+      setSubmitStatus('success');
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <main className="min-h-screen bg-white dark:bg-gray-900">
       {/* Navigation */}
@@ -85,7 +131,26 @@ export default function ContactSupport() {
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-lavender-50 to-lavender-100 dark:from-lavender-900/20 dark:to-lavender-800/20 p-8 rounded-3xl shadow-medium border border-lavender-200/50 dark:border-lavender-700/30">
             <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Send us a Message</h2>
-            <form className="space-y-6">
+            
+            {/* Success Message */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-xl">
+                <p className="text-green-800 dark:text-green-200 font-medium">
+                  ✓ Your message has been sent successfully! We&apos;ll get back to you within 24 hours.
+                </p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-100 dark:bg-red-900/30 border border-red-300 dark:border-red-700 rounded-xl">
+                <p className="text-red-800 dark:text-red-200 font-medium">
+                  ✗ {errorMessage}
+                </p>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-black dark:text-white mb-2">Name *</label>
@@ -94,7 +159,8 @@ export default function ContactSupport() {
                     id="name" 
                     name="name" 
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Your name"
                   />
                 </div>
@@ -105,7 +171,8 @@ export default function ContactSupport() {
                     id="email" 
                     name="email" 
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -117,7 +184,8 @@ export default function ContactSupport() {
                     id="subject" 
                     name="subject" 
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Brief description of your issue"
                   />
               </div>
@@ -128,16 +196,18 @@ export default function ContactSupport() {
                     name="message" 
                     rows={6}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400"
+                    disabled={isSubmitting}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Please describe your issue or question in detail..."
                   ></textarea>
               </div>
               <div>
                 <button 
                   type="submit"
-                  className="bg-lavender-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-lavender-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-lavender-800"
+                  disabled={isSubmitting}
+                  className="bg-lavender-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-lavender-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-lavender-800 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-medium"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </div>
             </form>
