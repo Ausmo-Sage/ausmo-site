@@ -11,13 +11,13 @@ export default function Home() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <Image
-                src="/images/ausmo-icon.png"
+                src="/images/ausmo-wordmark.png"
                 alt="Ausmo"
-                width={40}
-                height={40}
-                className="mr-3"
+                width={200}
+                height={60}
+                className="h-12 md:h-14 w-auto"
+                priority
               />
-              <span className="text-2xl font-bold text-[#7C5DC4] dark:text-[#9B7BD6]">Ausmo</span>
             </div>
             <div className="flex items-center space-x-6">
               <div className="hidden md:flex items-center space-x-8">
@@ -286,13 +286,12 @@ export default function Home() {
             <div className="md:col-span-1">
               <div className="flex items-center mb-6">
                 <Image
-                  src="/images/ausmo-icon.png"
-                  alt="Ausmo AAC"
-                  width={40}
-                  height={40}
-                  className="mr-3 rounded-xl"
+                  src="/images/ausmo-wordmark.png"
+                  alt="Ausmo"
+                  width={180}
+                  height={54}
+                  className="h-12 w-auto"
                 />
-                <span className="text-2xl font-bold gradient-text">Ausmo AAC</span>
               </div>
               <p className="text-gray-400 text-lg leading-relaxed">
                 Empowering communication through collaborative care teams and innovative AAC technology.
