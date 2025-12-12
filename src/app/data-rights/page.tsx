@@ -4,8 +4,8 @@ import { StandardNav } from '../../components/StandardNav'
 import { StandardFooter } from '../../components/StandardFooter'
 
 export const metadata: Metadata = {
-  title: 'Data Rights Request - Ausmo AAC',
-  description: 'Exercise your data protection rights with Ausmo AAC.',
+  title: 'Data Rights Request - Ausmo App',
+  description: 'Exercise your data protection rights with Ausmo App.',
 }
 
 export default function DataRights() {

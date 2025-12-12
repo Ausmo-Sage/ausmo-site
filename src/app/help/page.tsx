@@ -14,7 +14,7 @@ export default function HelpCenter() {
             Help Center
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Find answers to common questions and get support for Ausmo AAC
+            Find answers to common questions and get support for Ausmo App
           </p>
         </div>
       </section>
@@ -27,7 +27,7 @@ export default function HelpCenter() {
             <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium border border-primary-200/50 dark:border-primary-700/30">
               <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-4">Getting Started</h2>
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                <li>• How to download and install Ausmo AAC</li>
+                <li>• How to download and install Ausmo App</li>
                 <li>• Setting up your first child profile</li>
                 <li>• Creating your first communication board</li>
                 <li>• Adding custom images and symbols</li>

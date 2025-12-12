@@ -19,7 +19,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ausmoapp.com'),
-  title: 'Ausmo AAC - Empowering Communication for Everyone',
+  title: 'Ausmo App - Empowering Communication for Everyone',
   description: 'AAC communication app with custom image uploads, express pages, and full accessibility support. Designed for children with autism and communication difficulties.',
   keywords: [
     'AAC',
@@ -50,21 +50,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://ausmoapp.com',
-    siteName: 'Ausmo AAC',
-    title: 'Ausmo AAC - Empowering Communication for Everyone',
+    siteName: 'Ausmo App',
+    title: 'Ausmo App - Empowering Communication for Everyone',
     description: 'AAC communication app with custom image uploads, express pages, and full accessibility support.',
     images: [
       {
         url: '/images/app-icon.png',
         width: 512,
         height: 512,
-        alt: 'Ausmo AAC App Icon',
+        alt: 'Ausmo App App Icon',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ausmo AAC - Empowering Communication for Everyone',
+    title: 'Ausmo App - Empowering Communication for Everyone',
     description: 'AAC communication app with custom image uploads, express pages, and full accessibility support.',
     images: ['/images/app-icon.png'],
   },

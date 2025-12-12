@@ -14,7 +14,7 @@ export default function FAQ() {
             Frequently Asked Questions
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Find quick answers to the most common questions about Ausmo AAC
+            Find quick answers to the most common questions about Ausmo App
           </p>
         </div>
       </section>
@@ -28,16 +28,16 @@ export default function FAQ() {
               <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-6">General Questions</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">What is Ausmo AAC?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Ausmo AAC is a comprehensive multi-role platform that brings together Parents, Teachers, and Therapists to support children with autism and communication difficulties through real-time collaboration and innovative AAC tools.</p>
+                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">What is Ausmo App?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">Ausmo App is a comprehensive multi-role platform that brings together Parents, Teachers, and Therapists to support children with autism and communication difficulties through real-time collaboration and innovative AAC tools.</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Who can use Ausmo AAC?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Ausmo AAC is designed for collaborative care teams including parents managing child profiles, teachers tracking IEP goals, therapists creating treatment plans, and children with autism or communication difficulties.</p>
+                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Who can use Ausmo App?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">Ausmo App is designed for collaborative care teams including parents managing child profiles, teachers tracking IEP goals, therapists creating treatment plans, and children with autism or communication difficulties.</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Is Ausmo AAC free?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Yes, Ausmo AAC is free to download and use. There are no subscription fees or hidden costs for the core platform.</p>
+                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Is Ausmo App free?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">Yes, Ausmo App is free to download and use. There are no subscription fees or hidden costs for the core platform.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">What makes Ausmo different from other AAC apps?</h3>
@@ -51,8 +51,8 @@ export default function FAQ() {
               <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-6">Technical Questions</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">What devices support Ausmo AAC?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Ausmo AAC is available for iOS (iPhone/iPad), Android devices, and as a Progressive Web App (PWA) that works in any modern web browser.</p>
+                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">What devices support Ausmo App?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">Ausmo App is available for iOS (iPhone/iPad), Android devices, and as a Progressive Web App (PWA) that works in any modern web browser.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">How do I add custom images and symbols?</h3>
@@ -74,16 +74,16 @@ export default function FAQ() {
               <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-6">Accessibility Questions</h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Does Ausmo AAC support screen readers?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Yes, Ausmo AAC has full VoiceOver support on iOS and TalkBack support on Android for users who rely on screen readers.</p>
+                  <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Does Ausmo App support screen readers?</h3>
+                  <p className="text-gray-700 dark:text-gray-300">Yes, Ausmo App has full VoiceOver support on iOS and TalkBack support on Android for users who rely on screen readers.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Can I use switch scanning?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Yes, Ausmo AAC supports switch scanning for users who need alternative input methods.</p>
+                  <p className="text-gray-700 dark:text-gray-300">Yes, Ausmo App supports switch scanning for users who need alternative input methods.</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">Are there high contrast modes?</h3>
-                  <p className="text-gray-700 dark:text-gray-300">Yes, Ausmo AAC includes high contrast display options to improve visibility for users with visual impairments.</p>
+                  <p className="text-gray-700 dark:text-gray-300">Yes, Ausmo App includes high contrast display options to improve visibility for users with visual impairments.</p>
                 </div>
               </div>
             </div>

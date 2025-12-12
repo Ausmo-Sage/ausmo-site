@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
           </div>
           
           <p style="color: #888; font-size: 12px; margin-top: 20px;">
-            This message was sent from the Ausmo AAC contact form at ausmoapp.com
+            This message was sent from the Ausmo App contact form at ausmoapp.com
           </p>
         </div>
       `,

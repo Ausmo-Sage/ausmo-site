@@ -1,4 +1,4 @@
-# Ausmo AAC Landing Page - Deployment Guide
+# Ausmo App Landing Page - Deployment Guide
 
 ## 🚀 Tech Stack
 - **Frontend:** Next.js 15 with TypeScript
@@ -27,7 +27,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
 # Site Configuration
 NEXT_PUBLIC_SITE_URL=https://ausmoapp.com
-NEXT_PUBLIC_SITE_NAME=Ausmo AAC
+NEXT_PUBLIC_SITE_NAME=Ausmo App
 
 # Contact Information
 NEXT_PUBLIC_CONTACT_EMAIL=support@ausmoapp.com
@@ -213,7 +213,7 @@ npm run build
 
 ## 🎉 Deployment Complete!
 
-Your Ausmo AAC landing page is now:
+Your Ausmo App landing page is now:
 - ✅ **Fully Compliant** with worldwide privacy laws
 - ✅ **Highly Performant** with global CDN
 - ✅ **Secure** with enterprise-grade protection

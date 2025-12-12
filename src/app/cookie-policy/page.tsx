@@ -4,8 +4,8 @@ import { StandardNav } from '../../components/StandardNav'
 import { StandardFooter } from '../../components/StandardFooter'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy - Ausmo AAC',
-  description: 'Cookie Policy for Ausmo AAC - How we use cookies and similar technologies.',
+  title: 'Cookie Policy - Ausmo App',
+  description: 'Cookie Policy for Ausmo App - How we use cookies and similar technologies.',
 }
 
 export default function CookiePolicy() {
@@ -34,7 +34,7 @@ export default function CookiePolicy() {
               how you use our services.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              This Cookie Policy explains how Ausmo AAC uses cookies and similar technologies in compliance with 
+              This Cookie Policy explains how Ausmo App uses cookies and similar technologies in compliance with 
               applicable laws including GDPR (EU), ePrivacy Directive, CCPA (California), and other relevant regulations.
             </p>
           </section>

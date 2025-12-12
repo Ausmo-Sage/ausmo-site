@@ -3,8 +3,8 @@ import { StandardNav } from '../../components/StandardNav'
 import { StandardFooter } from '../../components/StandardFooter'
 
 export const metadata: Metadata = {
-  title: 'Accessibility Statement - Ausmo AAC',
-  description: 'Accessibility statement for Ausmo AAC - Our commitment to digital accessibility.',
+  title: 'Accessibility Statement - Ausmo App',
+  description: 'Accessibility statement for Ausmo App - Our commitment to digital accessibility.',
 }
 
 export default function AccessibilityStatement() {
@@ -29,7 +29,7 @@ export default function AccessibilityStatement() {
             <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">1. Our Commitment to Accessibility</h2>
             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 dark:border-blue-400 p-4 mb-4">
               <p className="text-blue-800 dark:text-blue-200 font-semibold">
-                Ausmo AAC is committed to ensuring digital accessibility for all users, including those with disabilities.
+                Ausmo App is committed to ensuring digital accessibility for all users, including those with disabilities.
               </p>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-4">

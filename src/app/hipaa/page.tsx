@@ -5,8 +5,8 @@ import { StandardNav } from '../../components/StandardNav'
 import { StandardFooter } from '../../components/StandardFooter'
 
 export const metadata: Metadata = {
-  title: 'HIPAA Compliance - Ausmo AAC',
-  description: 'HIPAA compliance information for Ausmo AAC - Health information privacy and security.',
+  title: 'HIPAA Compliance - Ausmo App',
+  description: 'HIPAA compliance information for Ausmo App - Health information privacy and security.',
 }
 
 export default function HIPAACompliance() {
@@ -35,7 +35,7 @@ export default function HIPAACompliance() {
               applies to healthcare providers, health plans, healthcare clearinghouses, and their business associates.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC is committed to maintaining HIPAA compliance to ensure the privacy and security of health 
+              Ausmo App is committed to maintaining HIPAA compliance to ensure the privacy and security of health 
               information for all users, particularly when working with healthcare providers and therapists who are 
               HIPAA-covered entities.
             </p>
@@ -79,7 +79,7 @@ export default function HIPAACompliance() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">3. Protected Health Information (PHI)</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              When used by HIPAA-covered entities (such as healthcare providers and therapists), Ausmo AAC may handle 
+              When used by HIPAA-covered entities (such as healthcare providers and therapists), Ausmo App may handle 
               the following types of PHI:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
@@ -98,7 +98,7 @@ export default function HIPAACompliance() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">4. Business Associate Agreements (BAA)</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC enters into Business Associate Agreements with HIPAA-covered entities who use our platform. 
+              Ausmo App enters into Business Associate Agreements with HIPAA-covered entities who use our platform. 
               Our BAAs include:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
@@ -141,7 +141,7 @@ export default function HIPAACompliance() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">6. Breach Notification</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              In accordance with the HIPAA Breach Notification Rule, Ausmo AAC will:
+              In accordance with the HIPAA Breach Notification Rule, Ausmo App will:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li>Notify affected covered entities within 60 days of discovery of a breach</li>
@@ -159,7 +159,7 @@ export default function HIPAACompliance() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">7. User Rights Under HIPAA</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              When your healthcare provider uses Ausmo AAC, you have the following rights regarding your PHI:
+              When your healthcare provider uses Ausmo App, you have the following rights regarding your PHI:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li>Right to access and obtain copies of your PHI</li>
@@ -181,7 +181,7 @@ export default function HIPAACompliance() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">8. Subcontractors and Third Parties</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC carefully vets all subcontractors and third-party service providers who may have access to PHI:
+              Ausmo App carefully vets all subcontractors and third-party service providers who may have access to PHI:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li>All subcontractors must sign Business Associate Agreements</li>
@@ -195,7 +195,7 @@ export default function HIPAACompliance() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">9. Training and Workforce Compliance</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              All Ausmo AAC employees and contractors with access to PHI receive:
+              All Ausmo App employees and contractors with access to PHI receive:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li>Comprehensive HIPAA training upon hiring</li>
@@ -212,7 +212,7 @@ export default function HIPAACompliance() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">10. Audit and Compliance Monitoring</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC maintains comprehensive audit capabilities:
+              Ausmo App maintains comprehensive audit capabilities:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li>Detailed logging of all PHI access and modifications</li>
@@ -227,7 +227,7 @@ export default function HIPAACompliance() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">11. Data Retention and Disposal</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC follows strict data retention and disposal policies:
+              Ausmo App follows strict data retention and disposal policies:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
               <li>PHI retained according to covered entity requirements and legal obligations</li>

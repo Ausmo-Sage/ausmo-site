@@ -4,8 +4,8 @@ import { StandardNav } from '../../components/StandardNav'
 import { StandardFooter } from '../../components/StandardFooter'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - Ausmo AAC',
-  description: 'Privacy Policy for Ausmo AAC - How we collect, use, and protect your personal information.',
+  title: 'Privacy Policy - Ausmo App',
+  description: 'Privacy Policy for Ausmo App - How we collect, use, and protect your personal information.',
 }
 
 export default function PrivacyPolicy() {
@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Introduction</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC ("we," "our," or "us") is committed to protecting your privacy and personal information. 
+              Ausmo App ("we," "our," or "us") is committed to protecting your privacy and personal information. 
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you 
               use our mobile application and website.
             </p>

@@ -4,8 +4,8 @@ import { StandardNav } from '../../components/StandardNav'
 import { StandardFooter } from '../../components/StandardFooter'
 
 export const metadata: Metadata = {
-  title: 'COPPA Compliance - Ausmo AAC',
-  description: 'COPPA compliance information for Ausmo AAC - Children\'s privacy protection.',
+  title: 'COPPA Compliance - Ausmo App',
+  description: 'COPPA compliance information for Ausmo App - Children\'s privacy protection.',
 }
 
 export default function COPPACompliance() {
@@ -35,7 +35,7 @@ export default function COPPACompliance() {
               from children.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC is designed to help children with communication difficulties, and we take our 
+              Ausmo App is designed to help children with communication difficulties, and we take our 
               responsibility to protect children's privacy very seriously.
             </p>
           </section>

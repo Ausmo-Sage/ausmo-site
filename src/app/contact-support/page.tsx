@@ -121,7 +121,7 @@ export default function ContactSupport() {
             Contact Support
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            We&apos;re here to help! Get in touch with our support team for assistance with Ausmo AAC
+            We&apos;re here to help! Get in touch with our support team for assistance with Ausmo App
           </p>
         </div>
       </section>

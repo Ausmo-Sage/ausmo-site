@@ -3,8 +3,8 @@ import { StandardNav } from '../../components/StandardNav'
 import { StandardFooter } from '../../components/StandardFooter'
 
 export const metadata: Metadata = {
-  title: 'DMCA Policy - Ausmo AAC',
-  description: 'DMCA takedown policy and procedures for Ausmo AAC.',
+  title: 'DMCA Policy - Ausmo App',
+  description: 'DMCA takedown policy and procedures for Ausmo App.',
 }
 
 export default function DMCAPolicy() {
@@ -28,7 +28,7 @@ export default function DMCAPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">1. DMCA Compliance</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC respects intellectual property rights and complies with the Digital Millennium 
+              Ausmo App respects intellectual property rights and complies with the Digital Millennium 
               Copyright Act (DMCA) and other applicable copyright laws. We have implemented procedures 
               to address claims of copyright infringement.
             </p>

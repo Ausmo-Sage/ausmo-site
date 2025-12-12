@@ -4,8 +4,8 @@ import { StandardNav } from '../../components/StandardNav'
 import { StandardFooter } from '../../components/StandardFooter'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - Ausmo AAC',
-  description: 'Terms of Service for Ausmo AAC - User agreement and service terms.',
+  title: 'Terms of Service - Ausmo App',
+  description: 'Terms of Service for Ausmo App - User agreement and service terms.',
 }
 
 export default function TermsOfService() {
@@ -29,7 +29,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">1. Acceptance of Terms</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              By accessing or using Ausmo AAC ("the Service"), you agree to be bound by these Terms of Service 
+              By accessing or using Ausmo App ("the Service"), you agree to be bound by these Terms of Service 
               ("Terms"). If you do not agree to these Terms, you may not use the Service.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
@@ -41,7 +41,7 @@ export default function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">2. Description of Service</h2>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Ausmo AAC is an Augmentative and Alternative Communication application designed to help individuals 
+              Ausmo App is an Augmentative and Alternative Communication application designed to help individuals 
               with communication difficulties express themselves effectively. The Service includes:
             </p>
             <ul className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-4">
@@ -129,7 +129,7 @@ export default function TermsOfService() {
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.1 Our Rights</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
               The Service, including its design, functionality, and content (excluding user-generated content), 
-              is owned by Ausmo AAC and protected by intellectual property laws.
+              is owned by Ausmo App and protected by intellectual property laws.
             </p>
 
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">6.2 Third-Party Content</h3>
@@ -196,7 +196,7 @@ export default function TermsOfService() {
             
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">10.1 Medical Disclaimer</h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              <strong>Important:</strong> Ausmo AAC is a communication tool and is not intended to replace 
+              <strong>Important:</strong> Ausmo App is a communication tool and is not intended to replace 
               professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare 
               professionals regarding communication therapy and treatment options.
             </p>

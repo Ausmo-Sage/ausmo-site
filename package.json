@@ -1,7 +1,7 @@
 {
   "name": "ausmo-landing",
   "version": "1.0.0",
-  "description": "Landing page for Ausmo AAC - Multi-role collaborative platform empowering communication through Parents, Teachers, and Therapists working together",
+  "description": "Landing page for Ausmo App - Multi-role collaborative platform empowering communication through Parents, Teachers, and Therapists working together",
   "private": true,
   "scripts": {
     "dev": "next dev",
