@@ -1,5 +1,5 @@
 /* Google Fonts - must be first */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,10 +14,11 @@
   --color-powder-blue: #D4E7F7;
   --color-cream: #FFF4E6;
   --color-text: #2C3E50;
-  --color-text-muted: #8B95A1;
+  --color-text-muted: #6B7280;
   --color-border: #E8EEF2;
   --background: #ffffff;
   --foreground: #2C3E50;
+  --color-gold: #E5A83B;
   
   /* Typography */
   --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
@@ -32,10 +33,11 @@
   --color-powder-blue: #D4E7F7;
   --color-cream: #FFF4E6;
   --color-text: #2C3E50;
-  --color-text-muted: #8B95A1;
+  --color-text-muted: #6B7280;
   --color-border: #E8EEF2;
   --background: #ffffff;
   --foreground: #2C3E50;
+  --color-gold: #E5A83B;
 }
 
 .dark {
@@ -46,11 +48,12 @@
   --color-powder-blue: #4A6B8A;
   --color-cream: #C9A876;
   --color-text: #E8EDF2;
-  --color-text-muted: #8B95A1;
-  --color-border: #6B5B8C;
-  --background: #1A1F2E;
+  --color-text-muted: #9CA3AF;
+  --color-border: #2D3548;
+  --background: #1a1d2e;
   --foreground: #E8EDF2;
-  --color-dark-surface: #252B3B;
+  --color-dark-surface: #242838;
+  --color-gold: #E5A83B;
 }
 
 

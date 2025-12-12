@@ -4,27 +4,34 @@ import ThemeToggle from '../components/ThemeToggle'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className="min-h-screen bg-white dark:bg-[#1a1d2e]">
       {/* Navigation */}
-      <nav className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-soft sticky top-0 z-50">
+      <nav className="bg-white/95 dark:bg-[#1a1d2e]/95 backdrop-blur-sm shadow-soft sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <Image
                 src="/images/ausmo-icon.png"
-                alt="Ausmo AAC"
-                width={48}
-                height={48}
-                className="mr-4 rounded-xl shadow-medium"
+                alt="Ausmo"
+                width={40}
+                height={40}
+                className="mr-3"
               />
-              <span className="text-3xl font-bold gradient-text">Ausmo AAC</span>
+              <span className="text-2xl font-bold text-[#7C5DC4] dark:text-[#9B7BD6]">Ausmo</span>
             </div>
-            <div className="flex items-center space-x-4">
-              <div className="hidden md:flex space-x-8">
-                <Link href="#features" className="text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
-                <Link href="#download" className="text-black dark:text-white hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
-                <Link href="/contact-support" className="text-black dark:text-white hover:text-accent-600 dark:hover:text-accent-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
+            <div className="flex items-center space-x-6">
+              <div className="hidden md:flex items-center space-x-8">
+                <Link href="#features" className="text-gray-700 dark:text-gray-200 hover:text-[#7C5DC4] dark:hover:text-[#9B7BD6] font-medium transition-colors duration-200">Features</Link>
+                <Link href="#about" className="text-gray-700 dark:text-gray-200 hover:text-[#7C5DC4] dark:hover:text-[#9B7BD6] font-medium transition-colors duration-200">About</Link>
+                <Link href="#resources" className="text-gray-700 dark:text-gray-200 hover:text-[#7C5DC4] dark:hover:text-[#9B7BD6] font-medium transition-colors duration-200">Resources</Link>
+                <Link href="/contact-support" className="text-gray-700 dark:text-gray-200 hover:text-[#7C5DC4] dark:hover:text-[#9B7BD6] font-medium transition-colors duration-200">Support</Link>
               </div>
+              <Link
+                href="#download"
+                className="bg-[#E5A83B] hover:bg-[#d4972e] text-white px-5 py-2 rounded-full font-semibold transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                Get Started
+              </Link>
               <ThemeToggle />
             </div>
           </div>
@@ -32,34 +39,44 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="section-padding relative overflow-hidden bg-gradient-to-br from-powder-blue-50 via-cream-50 to-powder-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        {/* Subtle decorative background elements */}
+      <section className="section-padding relative overflow-hidden bg-white dark:bg-[#1a1d2e]">
+        {/* Subtle wave decorative background */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 right-20 w-32 h-32 bg-primary-300/40 dark:bg-primary-500/20 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-20 left-20 w-32 h-32 bg-secondary-300/40 dark:bg-secondary-500/20 rounded-full blur-2xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-accent-300/30 dark:bg-accent-500/15 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#e8f4fc]/50 via-[#f0e8fc]/30 to-transparent dark:from-[#1e2235] dark:via-[#1a1d2e] dark:to-transparent"></div>
+          <svg className="absolute bottom-0 left-0 right-0 w-full h-48 text-[#e8f4fc]/60 dark:text-[#1e2235]/60" preserveAspectRatio="none" viewBox="0 0 1440 320">
+            <path fill="currentColor" d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,186.7C672,192,768,160,864,154.7C960,149,1056,171,1152,176C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+          </svg>
         </div>
         
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-8 animate-fade-in drop-shadow-sm">
-              Empowering Communication Through{' '}
-              <span className="gradient-text drop-shadow-sm">Collaboration</span>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-left">
+            {/* Supporting neurodiversity badge */}
+            <span className="inline-block bg-[#E5A83B] text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-8">
+              Supporting neurodiversity
+            </span>
+            
+            {/* Purple italic headline */}
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif italic text-[#7C5DC4] dark:text-[#9B7BD6] mb-8 animate-fade-in leading-tight">
+              Your journey,<br />
+              your way
             </h1>
-            <p className="text-xl md:text-2xl text-black dark:text-gray-100 mb-12 max-w-4xl mx-auto leading-relaxed animate-slide-up font-medium">
-              Ausmo AAC is a comprehensive multi-role platform that brings together Parents, Teachers, and Therapists 
-              to support children with autism and communication difficulties through real-time collaboration and innovative tools.
+            
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl leading-relaxed animate-slide-up">
+              Ausmo provides personalized support tools designed to help autistic 
+              individuals thrive. Track your patterns, build routines, and connect with 
+              understanding.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up">
+            
+            <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
               <Link
                 href="#download"
-                className="bg-white dark:bg-gray-800 text-black dark:text-white px-12 py-5 rounded-2xl text-xl font-bold hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 button-press pulse-gentle border-4 border-black dark:border-gray-600"
+                className="inline-flex items-center justify-center bg-gradient-to-r from-[#4ECDC4] via-[#9B7BD6] to-[#E5A83B] text-white px-8 py-4 rounded-full text-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                📱 Download Now
+                Download App
               </Link>
               <Link
                 href="#features"
-                className="bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500 text-white px-12 py-5 rounded-2xl text-xl font-bold hover:opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 button-press border-4 border-white/20"
+                className="inline-flex items-center justify-center bg-white dark:bg-[#2a2f42] text-gray-700 dark:text-gray-200 px-8 py-4 rounded-full text-lg font-semibold border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-[#353a50] transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 Learn More
               </Link>
@@ -69,12 +86,12 @@ export default function Home() {
       </section>
 
       {/* App Preview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 relative">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1a1d2e] relative">
         <div className="max-w-7xl mx-auto text-center">
           <div className="relative inline-block">
             {/* Decorative frame */}
             <div className="absolute -inset-4 bg-gradient-to-r from-primary-200 via-secondary-200 to-accent-200 dark:from-primary-800/30 dark:via-secondary-800/30 dark:to-accent-800/30 rounded-3xl blur-sm"></div>
-            <div className="relative bg-white dark:bg-gray-800 p-4 rounded-3xl shadow-large">
+            <div className="relative bg-white dark:bg-[#242838] p-4 rounded-3xl shadow-large">
               <Image
                 src="/images/splash.svg"
                 alt="Ausmo AAC App Preview"
@@ -91,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 relative overflow-hidden">
+      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1a1d2e] relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary-50/30 dark:bg-primary-900/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary-50/30 dark:bg-secondary-900/20 rounded-full blur-3xl"></div>
@@ -165,7 +182,7 @@ export default function Home() {
       </section>
 
       {/* Target Audience */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-[#242838] relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute top-1/2 left-0 w-48 h-48 bg-primary-50/20 dark:bg-primary-900/10 rounded-full blur-2xl"></div>
         <div className="absolute top-1/2 right-0 w-48 h-48 bg-lavender-50/20 dark:bg-lavender-900/10 rounded-full blur-2xl"></div>

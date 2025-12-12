@@ -90,6 +90,19 @@ module.exports = {
           800: '#9a7a4f',
           900: '#7f6442',
         },
+        gold: {
+          DEFAULT: 'var(--color-gold)',
+          50: '#fef9e7',
+          100: '#fdf0c3',
+          200: '#fce38d',
+          300: '#f9d14d',
+          400: '#E5A83B',
+          500: '#E5A83B',
+          600: '#d4972e',
+          700: '#b07b24',
+          800: '#8e6320',
+          900: '#74511c',
+        },
         // Keep existing gray scale for compatibility
         gray: {
           50: '#f9fafb',
@@ -108,6 +121,7 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Outfit', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
       },
       fontSize: {
         'xs': ['0.75rem', { lineHeight: '1rem' }],
