@@ -69,7 +69,10 @@ export const metadata: Metadata = {
     images: ['/images/app-icon.png'],
   },
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
     apple: '/images/app-icon.png',
   },
   manifest: '/manifest.json',
