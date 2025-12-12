@@ -3,7 +3,7 @@ import ThemeToggle from '../../components/ThemeToggle'
 
 export default function HelpCenter() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className="min-h-screen bg-white dark:bg-[#1A1F2E]">
       {/* Navigation */}
       <nav className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-soft sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,9 +13,9 @@ export default function HelpCenter() {
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex space-x-8">
-                <Link href="/#features" className="text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
-                <Link href="/#download" className="text-black dark:text-white hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
-                <Link href="/#support" className="text-black dark:text-white hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
+                <Link href="/#features" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
+                <Link href="/#download" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
+                <Link href="/#support" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
               </div>
               <ThemeToggle />
             </div>
@@ -24,25 +24,25 @@ export default function HelpCenter() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#D4E7F7] via-[#FFF4E6] to-[#D4E7F7] dark:from-[#1A1F2E] dark:via-[#252B3B] dark:to-[#1A1F2E]">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-6 drop-shadow-sm">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-6 drop-shadow-sm">
             Help Center
           </h1>
-          <p className="text-xl text-black dark:text-gray-100 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl text-[#2C3E50] dark:text-[#E8EDF2] max-w-2xl mx-auto leading-relaxed font-medium">
             Find answers to common questions and get support for Ausmo AAC
           </p>
         </div>
       </section>
 
       {/* Help Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1A1F2E]">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Getting Started */}
             <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium border border-primary-200/50 dark:border-primary-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Getting Started</h2>
-              <ul className="space-y-3 text-black dark:text-gray-200">
+              <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Getting Started</h2>
+              <ul className="space-y-3 text-[#2C3E50] dark:text-[#E8EDF2]">
                 <li>• How to download and install Ausmo AAC</li>
                 <li>• Setting up your first child profile</li>
                 <li>• Creating your first communication board</li>
@@ -53,8 +53,8 @@ export default function HelpCenter() {
 
             {/* Multi-Role Setup */}
             <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-8 rounded-3xl shadow-medium border border-secondary-200/50 dark:border-secondary-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Multi-Role Setup</h2>
-              <ul className="space-y-3 text-black dark:text-gray-200">
+              <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Multi-Role Setup</h2>
+              <ul className="space-y-3 text-[#2C3E50] dark:text-[#E8EDF2]">
                 <li>• Understanding Parent, Teacher, Therapist roles</li>
                 <li>• Switching between roles seamlessly</li>
                 <li>• Setting up collaborative care teams</li>
@@ -65,8 +65,8 @@ export default function HelpCenter() {
 
             {/* Team Collaboration */}
             <div className="bg-gradient-to-br from-lavender-50 to-lavender-100 dark:from-lavender-900/20 dark:to-lavender-800/20 p-8 rounded-3xl shadow-medium border border-lavender-200/50 dark:border-lavender-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Team Collaboration</h2>
-              <ul className="space-y-3 text-black dark:text-gray-200">
+              <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Team Collaboration</h2>
+              <ul className="space-y-3 text-[#2C3E50] dark:text-[#E8EDF2]">
                 <li>• Real-time messaging between team members</li>
                 <li>• Sharing notes and observations</li>
                 <li>• Collaborative goal setting and tracking</li>
@@ -77,8 +77,8 @@ export default function HelpCenter() {
 
             {/* Goals & Progress Management */}
             <div className="bg-gradient-to-br from-accent-50 to-accent-100 dark:from-accent-900/20 dark:to-accent-800/20 p-8 rounded-3xl shadow-medium border border-accent-200/50 dark:border-accent-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Goals & Progress</h2>
-              <ul className="space-y-3 text-black dark:text-gray-200">
+              <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Goals & Progress</h2>
+              <ul className="space-y-3 text-[#2C3E50] dark:text-[#E8EDF2]">
                 <li>• Creating SMART goals and IEP objectives</li>
                 <li>• Treatment plan development and tracking</li>
                 <li>• Progress visualization and analytics</li>
@@ -89,8 +89,8 @@ export default function HelpCenter() {
 
             {/* Symbol Library Management */}
             <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium border border-primary-200/50 dark:border-primary-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Symbol Library</h2>
-              <ul className="space-y-3 text-black dark:text-gray-200">
+              <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Symbol Library</h2>
+              <ul className="space-y-3 text-[#2C3E50] dark:text-[#E8EDF2]">
                 <li>• Using OpenSymbols, Bliss, and Mulberry libraries</li>
                 <li>• Custom symbol upload and management</li>
                 <li>• Favorites system and quick access</li>
@@ -101,8 +101,8 @@ export default function HelpCenter() {
 
             {/* Security & Privacy */}
             <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-8 rounded-3xl shadow-medium border border-secondary-200/50 dark:border-secondary-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-4">Security & Privacy</h2>
-              <ul className="space-y-3 text-black dark:text-gray-200">
+              <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Security & Privacy</h2>
+              <ul className="space-y-3 text-[#2C3E50] dark:text-[#E8EDF2]">
                 <li>• PIN security and biometric authentication</li>
                 <li>• Data encryption and privacy settings</li>
                 <li>• HIPAA, FERPA, and COPPA compliance</li>
@@ -114,11 +114,11 @@ export default function HelpCenter() {
 
           {/* Additional Resources */}
           <div className="mt-16 text-center">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-8">Additional Resources</h2>
+            <h2 className="text-3xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-8">Additional Resources</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/faq"
-                className="bg-white dark:bg-gray-800 text-black dark:text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-gray-300 dark:border-gray-600"
+                className="bg-white dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-[#D4E7F7] dark:hover:bg-[#1A1F2E] transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-[#E8EEF2] dark:border-[#6B5B8C]"
               >
                 View FAQ
               </Link>

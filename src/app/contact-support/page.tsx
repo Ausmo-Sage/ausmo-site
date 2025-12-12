@@ -49,9 +49,9 @@ export default function ContactSupport() {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className="min-h-screen bg-white dark:bg-[#1A1F2E]">
       {/* Navigation */}
-      <nav className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-soft sticky top-0 z-50">
+      <nav className="bg-white/90 dark:bg-[#1A1F2E]/90 backdrop-blur-sm shadow-soft sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
@@ -59,9 +59,9 @@ export default function ContactSupport() {
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex space-x-8">
-                <Link href="/#features" className="text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
-                <Link href="/#download" className="text-black dark:text-white hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
-                <Link href="/contact-support" className="text-black dark:text-white hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
+                <Link href="/#features" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
+                <Link href="/#download" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
+                <Link href="/contact-support" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
               </div>
               <ThemeToggle />
             </div>
@@ -70,29 +70,29 @@ export default function ContactSupport() {
       </nav>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#D4E7F7] via-[#FFF4E6] to-[#D4E7F7] dark:from-[#1A1F2E] dark:via-[#252B3B] dark:to-[#1A1F2E]">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-black dark:text-white mb-6 drop-shadow-sm">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-6 drop-shadow-sm">
             Contact Support
           </h1>
-          <p className="text-xl text-black dark:text-gray-100 max-w-2xl mx-auto leading-relaxed font-medium">
+          <p className="text-xl text-[#2C3E50] dark:text-[#E8EDF2] max-w-2xl mx-auto leading-relaxed font-medium">
             We&apos;re here to help! Get in touch with our support team for assistance with Ausmo AAC
           </p>
         </div>
       </section>
 
       {/* Contact Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1A1F2E]">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {/* Contact Information */}
             <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium border border-primary-200/50 dark:border-primary-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Get in Touch</h2>
-              <div className="space-y-4 text-black dark:text-gray-200">
+              <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-6">Get in Touch</h2>
+              <div className="space-y-4 text-[#2C3E50] dark:text-[#E8EDF2]">
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Email Support</h3>
                   <p>support@ausmoapp.com</p>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">We respond within 24 hours</p>
+                  <p className="text-sm text-[#8B95A1] dark:text-[#8B95A1]">We respond within 24 hours</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Support Hours</h3>
@@ -108,21 +108,21 @@ export default function ContactSupport() {
 
             {/* Quick Help */}
             <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-8 rounded-3xl shadow-medium border border-secondary-200/50 dark:border-secondary-700/30">
-              <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Quick Help</h2>
+              <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-6">Quick Help</h2>
               <div className="space-y-4">
                 <Link 
                   href="/faq"
-                  className="block bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-secondary-200 dark:border-secondary-700"
+                  className="block bg-white dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] p-4 rounded-xl hover:bg-[#D4E7F7] dark:hover:bg-[#1A1F2E] transition-colors border border-secondary-200 dark:border-secondary-700"
                 >
                   <h3 className="font-semibold">Frequently Asked Questions</h3>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">Find quick answers to common questions</p>
+                  <p className="text-sm text-[#8B95A1] dark:text-[#8B95A1]">Find quick answers to common questions</p>
                 </Link>
                 <Link 
                   href="/help"
-                  className="block bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-secondary-200 dark:border-secondary-700"
+                  className="block bg-white dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] p-4 rounded-xl hover:bg-[#D4E7F7] dark:hover:bg-[#1A1F2E] transition-colors border border-secondary-200 dark:border-secondary-700"
                 >
                   <h3 className="font-semibold">Help Center</h3>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">Comprehensive guides and tutorials</p>
+                  <p className="text-sm text-[#8B95A1] dark:text-[#8B95A1]">Comprehensive guides and tutorials</p>
                 </Link>
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function ContactSupport() {
 
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-lavender-50 to-lavender-100 dark:from-lavender-900/20 dark:to-lavender-800/20 p-8 rounded-3xl shadow-medium border border-lavender-200/50 dark:border-lavender-700/30">
-            <h2 className="text-2xl font-bold text-black dark:text-white mb-6">Send us a Message</h2>
+            <h2 className="text-2xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-6">Send us a Message</h2>
             
             {/* Success Message */}
             {submitStatus === 'success' && (
@@ -153,51 +153,51 @@ export default function ContactSupport() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-black dark:text-white mb-2">Name *</label>
+                  <label htmlFor="name" className="block text-sm font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Name *</label>
                   <input 
                     type="text" 
                     id="name" 
                     name="name" 
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 rounded-xl border border-[#E8EEF2] dark:border-[#6B5B8C] focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] placeholder-[#8B95A1] dark:placeholder-[#8B95A1] disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-black dark:text-white mb-2">Email *</label>
+                  <label htmlFor="email" className="block text-sm font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Email *</label>
                   <input 
                     type="email" 
                     id="email" 
                     name="email" 
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 rounded-xl border border-[#E8EEF2] dark:border-[#6B5B8C] focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] placeholder-[#8B95A1] dark:placeholder-[#8B95A1] disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-black dark:text-white mb-2">Subject *</label>
+                <label htmlFor="subject" className="block text-sm font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Subject *</label>
                   <input 
                     type="text" 
                     id="subject" 
                     name="subject" 
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 rounded-xl border border-[#E8EEF2] dark:border-[#6B5B8C] focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] placeholder-[#8B95A1] dark:placeholder-[#8B95A1] disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Brief description of your issue"
                   />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-black dark:text-white mb-2">Message *</label>
+                <label htmlFor="message" className="block text-sm font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Message *</label>
                   <textarea 
                     id="message" 
                     name="message" 
                     rows={6}
                     required
                     disabled={isSubmitting}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-600 dark:placeholder-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full px-4 py-3 rounded-xl border border-[#E8EEF2] dark:border-[#6B5B8C] focus:border-lavender-500 dark:focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-200 dark:focus:ring-lavender-800 bg-white dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] placeholder-[#8B95A1] dark:placeholder-[#8B95A1] disabled:opacity-50 disabled:cursor-not-allowed"
                     placeholder="Please describe your issue or question in detail..."
                   ></textarea>
               </div>
@@ -215,11 +215,11 @@ export default function ContactSupport() {
 
           {/* Additional Resources */}
           <div className="mt-16 text-center">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-8">Additional Resources</h2>
+            <h2 className="text-3xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-8">Additional Resources</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/privacy"
-                className="bg-white dark:bg-gray-800 text-black dark:text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-gray-300 dark:border-gray-600"
+                className="bg-white dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-[#D4E7F7] dark:hover:bg-[#1A1F2E] transition-all duration-300 shadow-medium hover:shadow-large transform hover:-translate-y-1 border-2 border-gray-300 dark:border-gray-600"
               >
                 Privacy Policy
               </Link>

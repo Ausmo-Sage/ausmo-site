@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function DataRights() {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className="min-h-screen bg-white dark:bg-[#1A1F2E]">
       {/* Navigation */}
       <nav className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-soft sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,9 +20,9 @@ export default function DataRights() {
             </div>
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex space-x-8">
-                <Link href="/#features" className="text-black dark:text-white hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
-                <Link href="/#download" className="text-black dark:text-white hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
-                <Link href="/contact-support" className="text-black dark:text-white hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
+                <Link href="/#features" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-primary-600 dark:hover:text-primary-400 font-semibold transition-colors duration-200 text-lg">Features</Link>
+                <Link href="/#download" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-secondary-600 dark:hover:text-secondary-400 font-semibold transition-colors duration-200 text-lg">Download</Link>
+                <Link href="/contact-support" className="text-[#2C3E50] dark:text-[#E8EDF2] hover:text-lavender-600 dark:hover:text-lavender-400 font-semibold transition-colors duration-200 text-lg">Support</Link>
               </div>
               <ThemeToggle />
             </div>
@@ -31,9 +31,9 @@ export default function DataRights() {
       </nav>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-black dark:text-white mb-8">Data Rights Request</h1>
+        <h1 className="text-4xl font-bold text-[#2C3E50] dark:text-[#E8EDF2] mb-8">Data Rights Request</h1>
         
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-8 space-y-8">
+        <div className="bg-[#FFF4E6] dark:bg-[#252B3B] rounded-lg shadow-sm p-8 space-y-8">
           <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 dark:border-blue-400 p-4 mb-6">
             <p className="text-blue-800 dark:text-blue-200 font-semibold">
               You have the right to control your personal information. Use this form to exercise your data protection rights.
@@ -41,8 +41,8 @@ export default function DataRights() {
           </div>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Your Data Rights</h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
+            <h2 className="text-2xl font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Your Data Rights</h2>
+            <p className="text-[#2C3E50] dark:text-[#E8EDF2] mb-4">
               Depending on your location, you may have the following rights regarding your personal information:
             </p>
             
@@ -86,11 +86,11 @@ export default function DataRights() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Request Form</h2>
+            <h2 className="text-2xl font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Request Form</h2>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="firstName" className="block text-sm font-medium text-[#2C3E50] dark:text-[#E8EDF2] mb-2">
                     First Name *
                   </label>
                   <input
@@ -98,11 +98,11 @@ export default function DataRights() {
                     id="firstName"
                     name="firstName"
                     required
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-[#E8EEF2] dark:border-[#6B5B8C] rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500 dark:focus:ring-secondary-400 bg-[#FFF4E6] dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2]"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="lastName" className="block text-sm font-medium text-[#2C3E50] dark:text-[#E8EDF2] mb-2">
                     Last Name *
                   </label>
                   <input
@@ -110,13 +110,13 @@ export default function DataRights() {
                     id="lastName"
                     name="lastName"
                     required
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-[#E8EEF2] dark:border-[#6B5B8C] rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500 dark:focus:ring-secondary-400 bg-[#FFF4E6] dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2]"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-[#2C3E50] dark:text-[#E8EDF2] mb-2">
                   Email Address *
                 </label>
                 <input
@@ -124,19 +124,19 @@ export default function DataRights() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-[#E8EEF2] dark:border-[#6B5B8C] rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500 dark:focus:ring-secondary-400 bg-[#FFF4E6] dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2]"
                 />
               </div>
 
               <div>
-                <label htmlFor="requestType" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="requestType" className="block text-sm font-medium text-[#2C3E50] dark:text-[#E8EDF2] mb-2">
                   Type of Request *
                 </label>
                 <select
                   id="requestType"
                   name="requestType"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-[#E8EEF2] dark:border-[#6B5B8C] rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500 dark:focus:ring-secondary-400 bg-[#FFF4E6] dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2]"
                 >
                   <option value="">Select a request type</option>
                   <option value="access">Access my personal data</option>
@@ -152,27 +152,27 @@ export default function DataRights() {
               </div>
 
               <div>
-                <label htmlFor="description" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="description" className="block text-sm font-medium text-[#2C3E50] dark:text-[#E8EDF2] mb-2">
                   Additional Details
                 </label>
                 <textarea
                   id="description"
                   name="description"
                   rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                  className="w-full px-3 py-2 border border-[#E8EEF2] dark:border-[#6B5B8C] rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500 dark:focus:ring-secondary-400 bg-[#FFF4E6] dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2] placeholder-gray-500 dark:placeholder-gray-400"
                   placeholder="Please provide any additional details about your request..."
                 ></textarea>
               </div>
 
               <div>
-                <label htmlFor="verification" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="verification" className="block text-sm font-medium text-[#2C3E50] dark:text-[#E8EDF2] mb-2">
                   Verification Method *
                 </label>
                 <select
                   id="verification"
                   name="verification"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-[#E8EEF2] dark:border-[#6B5B8C] rounded-md focus:outline-none focus:ring-2 focus:ring-secondary-500 dark:focus:ring-secondary-400 bg-[#FFF4E6] dark:bg-[#252B3B] text-[#2C3E50] dark:text-[#E8EDF2]"
                 >
                   <option value="">Select verification method</option>
                   <option value="email">Email verification</option>
@@ -182,9 +182,9 @@ export default function DataRights() {
                 </select>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Response Time</h3>
-                <ul className="list-disc pl-4 text-gray-700 dark:text-gray-300 text-sm">
+              <div className="bg-[#D4E7F7] dark:bg-[#1A1F2E] p-4 rounded-lg">
+                <h3 className="font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Response Time</h3>
+                <ul className="list-disc pl-4 text-[#2C3E50] dark:text-[#E8EDF2] text-sm">
                   <li><strong>GDPR (EU):</strong> We will respond within 1 month</li>
                   <li><strong>CCPA (California):</strong> We will respond within 45 days</li>
                   <li><strong>Other jurisdictions:</strong> We will respond as required by applicable law</li>
@@ -199,7 +199,7 @@ export default function DataRights() {
                   required
                   className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                 />
-                <label htmlFor="consent" className="ml-2 text-sm text-gray-700 dark:text-gray-300">
+                <label htmlFor="consent" className="ml-2 text-sm text-[#2C3E50] dark:text-[#E8EDF2]">
                   I understand that this request will be processed in accordance with applicable data protection laws 
                   and that I may need to provide additional verification information. *
                 </label>
@@ -207,7 +207,7 @@ export default function DataRights() {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="w-full bg-primary-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
               >
                 Submit Data Rights Request
               </button>
@@ -215,38 +215,38 @@ export default function DataRights() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Alternative Contact Methods</h2>
+            <h2 className="text-2xl font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Alternative Contact Methods</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Email</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">privacy@ausmoapp.com</p>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">Include "Data Rights Request" in the subject line</p>
+              <div className="bg-[#D4E7F7] dark:bg-[#1A1F2E] p-4 rounded-lg">
+                <h3 className="font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Email</h3>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] mb-2">privacy@ausmoapp.com</p>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] text-sm">Include "Data Rights Request" in the subject line</p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Phone</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">+1 (555) 123-4567</p>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">Monday - Friday, 9 AM - 6 PM EST</p>
+              <div className="bg-[#D4E7F7] dark:bg-[#1A1F2E] p-4 rounded-lg">
+                <h3 className="font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Phone</h3>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] mb-2">+1 (555) 123-4567</p>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] text-sm">Monday - Friday, 9 AM - 6 PM EST</p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Mail</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">123 Communication Ave</p>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">Accessibility City, AC 12345</p>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">Attn: Data Protection Officer</p>
+              <div className="bg-[#D4E7F7] dark:bg-[#1A1F2E] p-4 rounded-lg">
+                <h3 className="font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Mail</h3>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] mb-2">123 Communication Ave</p>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Accessibility City, AC 12345</p>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] text-sm">Attn: Data Protection Officer</p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">In-App</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">Settings → Privacy → Data Rights</p>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">Available in the mobile app</p>
+              <div className="bg-[#D4E7F7] dark:bg-[#1A1F2E] p-4 rounded-lg">
+                <h3 className="font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">In-App</h3>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Settings → Privacy → Data Rights</p>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] text-sm">Available in the mobile app</p>
               </div>
             </div>
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">What Happens Next?</h2>
-            <ol className="list-decimal pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+            <h2 className="text-2xl font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">What Happens Next?</h2>
+            <ol className="list-decimal pl-6 text-[#2C3E50] dark:text-[#E8EDF2] space-y-2">
               <li><strong>Confirmation:</strong> You'll receive an email confirmation within 24 hours</li>
               <li><strong>Verification:</strong> We may request additional verification information</li>
               <li><strong>Processing:</strong> Your request will be processed according to applicable law</li>
@@ -256,28 +256,28 @@ export default function DataRights() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-4">Frequently Asked Questions</h2>
             
             <div className="space-y-4">
               <div className="border-l-4 border-blue-500 dark:border-blue-400 pl-4">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">How long does it take to process my request?</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">
+                <h3 className="font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">How long does it take to process my request?</h3>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] text-sm">
                   Response times vary by jurisdiction: GDPR requires 1 month, CCPA requires 45 days, 
                   and other laws have their own requirements. We'll respond as quickly as possible.
                 </p>
               </div>
 
               <div className="border-l-4 border-green-500 dark:border-green-400 pl-4">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Is there a fee for data requests?</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">
+                <h3 className="font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">Is there a fee for data requests?</h3>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] text-sm">
                   Generally no, but we may charge a reasonable fee for excessive or repetitive requests 
                   as permitted by law.
                 </p>
               </div>
 
               <div className="border-l-4 border-accent-500 dark:border-accent-400 pl-4">
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">What if I'm not satisfied with the response?</h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm">
+                <h3 className="font-semibold text-[#2C3E50] dark:text-[#E8EDF2] mb-2">What if I'm not satisfied with the response?</h3>
+                <p className="text-[#2C3E50] dark:text-[#E8EDF2] text-sm">
                   You have the right to lodge a complaint with your local data protection authority 
                   or supervisory authority.
                 </p>
