@@ -1,343 +1,443 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import ThemeToggle from '../components/ThemeToggle'
+import { Menu, X, Download, ArrowRight, Check, Shield, Users, MessageSquare, TrendingUp, Smartphone, Globe, Lock } from 'lucide-react'
+import { ThemeProvider, useTheme } from '../components/ThemeProvider'
+import { ThemeToggle } from '../components/ThemeToggle'
+import { StandardFooter } from '../components/StandardFooter'
 
-export default function Home() {
+function AusmoWebsite() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [activeRole, setActiveRole] = useState<'parent' | 'teacher' | 'therapist' | 'admin'>('parent')
+  const { theme } = useTheme()
+
+  const roles = [
+    {
+      id: 'parent' as const,
+      title: 'Parents',
+      icon: Users,
+      description: 'Track your child\'s progress, communicate with their care team, and access AAC tools anytime.',
+      features: [
+        'Real-time progress updates',
+        'AAC communication tools',
+        'Direct messaging with care team',
+        'Goal tracking and milestones'
+      ]
+    },
+    {
+      id: 'teacher' as const,
+      title: 'Teachers',
+      icon: Globe,
+      description: 'Manage classroom activities, log observations, and collaborate seamlessly with the entire team.',
+      features: [
+        'Student roster management',
+        'Observation logging',
+        'Schedule coordination',
+        'Team collaboration feed'
+      ]
+    },
+    {
+      id: 'therapist' as const,
+      title: 'Therapists',
+      icon: TrendingUp,
+      description: 'Create SMART goals, track sessions, and analyze progress with data-driven insights.',
+      features: [
+        'IEP/SMART goal creation',
+        'Session data recording',
+        'Progress visualization',
+        'Analytics and reports'
+      ]
+    },
+    {
+      id: 'admin' as const,
+      title: 'Administrators',
+      icon: Shield,
+      description: 'Manage system-wide settings, users, and maintain compliance across your organization.',
+      features: [
+        'User management',
+        'System-wide settings',
+        'Compliance monitoring',
+        'Audit logging'
+      ]
+    }
+  ]
+
+  const coreFeatures = [
+    {
+      icon: MessageSquare,
+      title: 'AAC Communication',
+      description: 'Interactive symbol boards, custom libraries, phrase builder, and text-to-speech with customizable voices.',
+      color: 'from-purple-500 to-purple-600'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Progress Tracking',
+      description: 'SMART/IEP goals, real-time visualization, milestone tracking, and data-driven analytics.',
+      color: 'from-blue-500 to-blue-600'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Multi-user chat, direct messaging, shared notes, and activity timelines for seamless coordination.',
+      color: 'from-teal-500 to-teal-600'
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'HIPAA/FERPA/COPPA-minded architecture with role-based access control and audit logging.',
+      color: 'from-indigo-500 to-indigo-600'
+    }
+  ]
+
   return (
-    <main className="min-h-screen bg-white dark:bg-[#1a1d2e]">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Navigation */}
-      <nav className="bg-white/95 dark:bg-[#1a1d2e]/95 backdrop-blur-sm shadow-soft sticky top-0 z-50">
+      <nav className="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
             <div className="flex items-center">
               <Image
                 src="/images/ausmo-wordmark.png"
                 alt="Ausmo"
-                width={200}
-                height={60}
-                className="h-12 md:h-14 w-auto"
+                width={160}
+                height={48}
+                className="h-10 w-auto"
+                style={{ objectFit: 'contain' }}
                 priority
               />
             </div>
-            <div className="flex items-center space-x-6">
-              <div className="hidden md:flex items-center space-x-8">
-                <Link href="#features" className="text-gray-700 dark:text-gray-200 hover:text-[#7C5DC4] dark:hover:text-[#9B7BD6] font-medium transition-colors duration-200">Features</Link>
-                <Link href="#about" className="text-gray-700 dark:text-gray-200 hover:text-[#7C5DC4] dark:hover:text-[#9B7BD6] font-medium transition-colors duration-200">About</Link>
-                <Link href="#resources" className="text-gray-700 dark:text-gray-200 hover:text-[#7C5DC4] dark:hover:text-[#9B7BD6] font-medium transition-colors duration-200">Resources</Link>
-                <Link href="/contact-support" className="text-gray-700 dark:text-gray-200 hover:text-[#7C5DC4] dark:hover:text-[#9B7BD6] font-medium transition-colors duration-200">Support</Link>
-              </div>
-              <Link
-                href="#download"
-                className="bg-[#E5A83B] hover:bg-[#d4972e] text-white px-5 py-2 rounded-full font-semibold transition-all duration-200 shadow-sm hover:shadow-md"
-              >
-                Get Started
-              </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#features" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">Features</a>
+              <a href="#roles" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">Who It's For</a>
+              <a href="#security" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">Security</a>
+              <Link href="/contact-support" className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition">Contact</Link>
               <ThemeToggle />
+              <button className="px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-white hover:shadow-lg transition">
+                Get Started
+              </button>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center gap-3">
+              <ThemeToggle />
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition"
+              >
+                {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
             </div>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+            <div className="px-4 py-4 space-y-3">
+              <a href="#features" className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition py-2">Features</a>
+              <a href="#roles" className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition py-2">Who It's For</a>
+              <a href="#security" className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition py-2">Security</a>
+              <Link href="/contact-support" className="block text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition py-2">Contact</Link>
+              <button className="w-full px-5 py-2 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-white">
+                Get Started
+              </button>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="section-padding relative overflow-hidden bg-white dark:bg-[#1a1d2e]">
-        {/* Subtle wave decorative background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#e8f4fc]/50 via-[#f0e8fc]/30 to-transparent dark:from-[#1e2235] dark:via-[#1a1d2e] dark:to-transparent"></div>
-          <svg className="absolute bottom-0 left-0 right-0 w-full h-48 text-[#e8f4fc]/60 dark:text-[#1e2235]/60" preserveAspectRatio="none" viewBox="0 0 1440 320">
-            <path fill="currentColor" d="M0,192L48,176C96,160,192,128,288,133.3C384,139,480,181,576,186.7C672,192,768,160,864,154.7C960,149,1056,171,1152,176C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-          </svg>
-        </div>
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-purple-200 dark:bg-purple-900/30 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-200 dark:bg-blue-900/30 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-3xl opacity-30 animate-pulse" style={{ animationDelay: '1s' }}></div>
         
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="text-left">
-            {/* Supporting neurodiversity badge */}
-            <span className="inline-block bg-[#E5A83B] text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-8">
-              Supporting neurodiversity
-            </span>
-            
-            {/* Purple italic headline */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif italic text-[#7C5DC4] dark:text-[#9B7BD6] mb-8 animate-fade-in leading-tight">
-              Your journey,<br />
-              your way
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center max-w-4xl mx-auto space-y-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-purple-200 dark:border-purple-800 text-sm">
+              <span className="flex h-2 w-2 rounded-full bg-purple-500 animate-pulse"></span>
+              <span className="text-gray-700 dark:text-gray-300">Supporting children with autism and communication needs</span>
+            </div>
+
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 dark:from-purple-400 dark:via-blue-400 dark:to-teal-400" style={{
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Communication & Care,<br />Simplified
             </h1>
+
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              A complete platform connecting parents, teachers, and therapists to support every child's unique journey with AAC tools, progress tracking, and real-time collaboration.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
+              <button className="group px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-white text-lg hover:shadow-2xl transition flex items-center gap-2">
+                Download for iOS
+                <Download className="group-hover:translate-y-0.5 transition" size={20} />
+              </button>
+              <button className="px-8 py-4 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-lg border-2 border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-lg transition flex items-center gap-2">
+                Download for Android
+                <Download size={20} />
+              </button>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-8 pt-8 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-2">
+                <Check className="text-green-500" size={20} />
+                <span>HIPAA/FERPA Compliant</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="text-green-500" size={20} />
+                <span>Free for Families</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="text-green-500" size={20} />
+                <span>Trusted by 1,000+ Care Teams</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Features */}
+      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl sm:text-5xl mb-6 text-gray-900 dark:text-white font-bold">Everything You Need in One Platform</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Ausmo brings together powerful AAC tools, progress tracking, and team collaboration in a secure, easy-to-use platform.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {coreFeatures.map((feature) => {
+              const Icon = feature.icon
+              return (
+                <div
+                  key={feature.title}
+                  className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-800/50 rounded-3xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition"
+                >
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 shadow-lg`}>
+                    <Icon className="text-white" size={28} />
+                  </div>
+                  <h3 className="text-2xl mb-3 text-gray-900 dark:text-white font-bold">{feature.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{feature.description}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* AAC Showcase */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-block px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 text-sm mb-6">
+                AAC Communication
+              </div>
+              <h2 className="text-4xl sm:text-5xl mb-6 text-gray-900 dark:text-white font-bold">Powerful Communication Tools</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+                Interactive symbol boards with OpenSymbols and Mulberry support, custom phrase builder, text-to-speech, and personalized favorites make communication accessible and empowering.
+              </p>
+              <ul className="space-y-4">
+                {['Interactive symbol boards with categories', 'Custom symbol library upload', 'Phrase builder for sentence construction', 'Text-to-speech with custom voices', 'Favorites and personalization'].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center">
+                      <Check className="text-purple-600 dark:text-purple-400" size={16} />
+                    </div>
+                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl leading-relaxed animate-slide-up">
-              Ausmo provides personalized support tools designed to help autistic 
-              individuals thrive. Track your patterns, build routines, and connect with 
-              understanding.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
-              <Link
-                href="#download"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-[#4ECDC4] via-[#9B7BD6] to-[#E5A83B] text-white px-8 py-4 rounded-full text-lg font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
-                Download App
-              </Link>
-              <Link
-                href="#features"
-                className="inline-flex items-center justify-center bg-white dark:bg-[#2a2f42] text-gray-700 dark:text-gray-200 px-8 py-4 rounded-full text-lg font-semibold border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-[#353a50] transition-all duration-300 shadow-sm hover:shadow-md"
-              >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* App Preview */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1a1d2e] relative">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="relative inline-block">
-            {/* Decorative frame */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary-200 via-secondary-200 to-accent-200 dark:from-primary-800/30 dark:via-secondary-800/30 dark:to-accent-800/30 rounded-3xl blur-sm"></div>
-            <div className="relative bg-white dark:bg-[#242838] p-4 rounded-3xl shadow-large">
-              <Image
-                src="/images/splash.svg"
-                alt="Ausmo AAC App Preview"
-                width={400}
-                height={400}
-                className="mx-auto rounded-2xl shadow-medium"
-              />
-            </div>
-          </div>
-          <p className="mt-8 text-lg text-black dark:text-gray-100 max-w-2xl mx-auto font-medium">
-            Experience the intuitive interface designed with accessibility and ease of use in mind.
-          </p>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1a1d2e] relative overflow-hidden">
-        {/* Subtle background decoration */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-primary-50/30 dark:bg-primary-900/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary-50/30 dark:bg-secondary-900/20 rounded-full blur-3xl"></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 drop-shadow-sm">
-              Comprehensive Platform Features
-            </h2>
-            <p className="text-xl md:text-2xl text-black dark:text-gray-100 max-w-3xl mx-auto leading-relaxed font-medium">
-              Multi-role collaboration tools designed for Parents, Teachers, and Therapists working together
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Multi-Role Architecture */}
-            <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium card-hover border border-primary-200/50 dark:border-primary-700/30">
-              <div className="text-5xl mb-6 text-center">👥</div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4 text-center drop-shadow-sm">Multi-Role Platform</h3>
-              <p className="text-black dark:text-gray-200 text-center leading-relaxed font-medium">
-                Parent, Teacher, Therapist, and Admin roles with seamless switching and collaborative care management.
-              </p>
-            </div>
-
-            {/* Real-time Collaboration */}
-            <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-8 rounded-3xl shadow-medium card-hover border border-secondary-200/50 dark:border-secondary-700/30">
-              <div className="text-5xl mb-6 text-center">💬</div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4 text-center drop-shadow-sm">Real-time Collaboration</h3>
-              <p className="text-black dark:text-gray-200 text-center leading-relaxed font-medium">
-                Live messaging, shared notes, and synchronized updates across all team members and devices.
-              </p>
-            </div>
-
-            {/* OpenSymbols Integration */}
-            <div className="bg-gradient-to-br from-lavender-50 to-lavender-100 dark:from-lavender-900/20 dark:to-lavender-800/20 p-8 rounded-3xl shadow-medium card-hover border border-lavender-200/50 dark:border-lavender-700/30">
-              <div className="text-5xl mb-6 text-center">🎨</div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4 text-center drop-shadow-sm">Symbol Library</h3>
-              <p className="text-black dark:text-gray-200 text-center leading-relaxed font-medium">
-                Thousands of OpenSymbols, Bliss, and Mulberry symbols with custom uploads and favorites system.
-              </p>
-            </div>
-
-            {/* Goals & Progress Management */}
-            <div className="bg-gradient-to-br from-accent-50 to-accent-100 dark:from-accent-900/20 dark:to-accent-800/20 p-8 rounded-3xl shadow-medium card-hover border border-accent-200/50 dark:border-accent-700/30">
-              <div className="text-5xl mb-6 text-center">📊</div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4 text-center drop-shadow-sm">Goals & Progress</h3>
-              <p className="text-black dark:text-gray-200 text-center leading-relaxed font-medium">
-                SMART goals, IEP tracking, progress visualization, and collaborative goal management for therapy teams.
-              </p>
-            </div>
-
-            {/* Security & Compliance */}
-            <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 p-8 rounded-3xl shadow-medium card-hover border border-primary-200/50 dark:border-primary-700/30">
-              <div className="text-5xl mb-6 text-center">🔒</div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4 text-center drop-shadow-sm">Security & Compliance</h3>
-              <p className="text-black dark:text-gray-200 text-center leading-relaxed font-medium">
-                HIPAA, FERPA, COPPA compliant with PIN security, biometric auth, and end-to-end encryption.
-              </p>
-            </div>
-
-            {/* Communication Features */}
-            <div className="bg-gradient-to-br from-secondary-50 to-secondary-100 dark:from-secondary-900/20 dark:to-secondary-800/20 p-8 rounded-3xl shadow-medium card-hover border border-secondary-200/50 dark:border-secondary-700/30">
-              <div className="text-5xl mb-6 text-center">🎙️</div>
-              <h3 className="text-2xl font-bold text-black dark:text-white mb-4 text-center drop-shadow-sm">Communication Tools</h3>
-              <p className="text-black dark:text-gray-200 text-center leading-relaxed font-medium">
-                Text-to-speech, audio recording, custom voices, and express communication boards for every need.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Target Audience */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-[#242838] relative overflow-hidden">
-        {/* Subtle background decoration */}
-        <div className="absolute top-1/2 left-0 w-48 h-48 bg-primary-50/20 dark:bg-primary-900/10 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/2 right-0 w-48 h-48 bg-lavender-50/20 dark:bg-lavender-900/10 rounded-full blur-2xl"></div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-6 drop-shadow-sm">
-              Collaborative Care Teams
-            </h2>
-            <p className="text-xl text-black dark:text-gray-100 max-w-2xl mx-auto font-medium">
-              Bringing together families and professionals for comprehensive communication support
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group">
-              <div className="bg-accent-500 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-medium">
-                <div className="text-4xl">👶</div>
-              </div>
-              <h3 className="text-xl font-bold text-black dark:text-white mb-3 drop-shadow-sm">Children</h3>
-              <p className="text-black dark:text-gray-200 font-medium">With autism and communication needs</p>
-            </div>
-            <div className="text-center group">
-              <div className="bg-gradient-to-br from-secondary-100 to-secondary-200 dark:from-secondary-800 dark:to-secondary-700 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-4xl">👨‍👩‍👧‍👦</div>
-              </div>
-              <h3 className="text-xl font-bold text-black dark:text-white mb-3 drop-shadow-sm">Parents</h3>
-              <p className="text-black dark:text-gray-200 font-medium">Managing child profiles and team collaboration</p>
-            </div>
-            <div className="text-center group">
-              <div className="bg-gradient-to-br from-lavender-100 to-lavender-200 dark:from-lavender-800 dark:to-lavender-700 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-4xl">🏫</div>
-              </div>
-              <h3 className="text-xl font-bold text-black dark:text-white mb-3 drop-shadow-sm">Teachers</h3>
-              <p className="text-black dark:text-gray-200 font-medium">IEP goals and classroom integration</p>
-            </div>
-            <div className="text-center group">
-              <div className="bg-gradient-to-br from-accent-100 to-accent-200 dark:from-accent-800 dark:to-accent-700 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-4xl">👩‍⚕️</div>
-              </div>
-              <h3 className="text-xl font-bold text-black dark:text-white mb-3 drop-shadow-sm">Therapists</h3>
-              <p className="text-black dark:text-gray-200 font-medium">Treatment plans and progress tracking</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section id="download" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-500 via-secondary-500 to-accent-500 dark:from-primary-600 dark:via-secondary-600 dark:to-accent-600 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #CDB8E8 0%, #A8D5F7 50%, #F9D7A8 100%)' }}>
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-black/10 dark:bg-black/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 dark:bg-white/5 rounded-full blur-xl"></div>
-          <div className="absolute bottom-20 right-20 w-40 h-40 bg-white/10 dark:bg-white/5 rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white/5 dark:bg-white/3 rounded-full blur-2xl"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
-            Download Ausmo AAC Today
-          </h2>
-          <p className="text-xl md:text-2xl text-white/95 dark:text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
-            Available on iOS, Android, and Web (PWA). Start your collaborative communication journey today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              href="#"
-              className="bg-white dark:bg-gray-100 text-gray-900 dark:text-gray-900 px-16 py-6 rounded-2xl text-2xl font-bold hover:bg-gray-100 dark:hover:bg-gray-200 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 button-press border-4 border-gray-300 dark:border-gray-400"
-            >
-              📱 Download for iOS
-            </Link>
-            <Link
-              href="#"
-              className="bg-white dark:bg-gray-100 text-gray-900 dark:text-gray-900 px-16 py-6 rounded-2xl text-2xl font-bold hover:bg-gray-100 dark:hover:bg-gray-200 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 button-press border-4 border-gray-300 dark:border-gray-400"
-            >
-              🤖 Download for Android
-            </Link>
-            <Link
-              href="#"
-              className="bg-white dark:bg-gray-100 text-gray-900 dark:text-gray-900 px-16 py-6 rounded-2xl text-2xl font-bold hover:bg-gray-100 dark:hover:bg-gray-200 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 button-press border-4 border-gray-300 dark:border-gray-400"
-            >
-              🌐 Use on Web
-            </Link>
-          </div>
-          <p className="mt-8 text-white/80 dark:text-white/70 text-lg">
-            Free to download • No subscription required
-          </p>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer id="support" className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-primary-500/20 to-transparent rounded-full blur-xl"></div>
-          <div className="absolute bottom-10 left-10 w-40 h-40 bg-gradient-to-tr from-secondary-500/20 to-transparent rounded-full blur-xl"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div className="md:col-span-1">
-              <div className="flex items-center mb-6">
+            <div className="relative">
+              <div className="aspect-[4/3] bg-gradient-to-br from-purple-400 via-blue-400 to-teal-400 dark:from-purple-600 dark:via-blue-600 dark:to-teal-600 rounded-3xl shadow-2xl flex items-center justify-center">
                 <Image
-                  src="/images/ausmo-wordmark.png"
-                  alt="Ausmo"
-                  width={180}
-                  height={54}
-                  className="h-12 w-auto"
+                  src="/images/ausmo-icon.png"
+                  alt="AAC Tools"
+                  width={192}
+                  height={192}
+                  className="w-48 h-48 object-contain filter drop-shadow-2xl"
                 />
               </div>
-              <p className="text-gray-400 text-lg leading-relaxed">
-                Empowering communication through collaborative care teams and innovative AAC technology.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-6 text-white">Product</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li><Link href="#features" className="hover:text-primary-400 transition-colors duration-200">Features</Link></li>
-                <li><Link href="#download" className="hover:text-primary-400 transition-colors duration-200">Download</Link></li>
-                <li><Link href="/privacy" className="hover:text-primary-400 transition-colors duration-200">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-primary-400 transition-colors duration-200">Terms of Service</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-6 text-white">Support</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li><Link href="/contact-support" className="hover:text-secondary-400 transition-colors duration-200">Contact Support</Link></li>
-                <li><Link href="/help" className="hover:text-secondary-400 transition-colors duration-200">Help Center</Link></li>
-                <li><Link href="/faq" className="hover:text-secondary-400 transition-colors duration-200">FAQ</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-6 text-white">Legal</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li><Link href="/privacy" className="hover:text-lavender-400 transition-colors duration-200">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-lavender-400 transition-colors duration-200">Terms of Service</Link></li>
-                <li><Link href="/cookie-policy" className="hover:text-lavender-400 transition-colors duration-200">Cookie Policy</Link></li>
-                <li><Link href="/coppa" className="hover:text-lavender-400 transition-colors duration-200">COPPA Compliance</Link></li>
-                <li><Link href="/accessibility" className="hover:text-lavender-400 transition-colors duration-200">Accessibility Statement</Link></li>
-                <li><Link href="/dmca" className="hover:text-lavender-400 transition-colors duration-200">DMCA Policy</Link></li>
-                <li><Link href="/data-rights" className="hover:text-lavender-400 transition-colors duration-200">Data Rights</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p className="text-lg mb-6">&copy; 2024 Ausmo AAC. All rights reserved.</p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-base">
-              <Link href="/privacy" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-white transition-colors duration-200">Terms of Service</Link>
-              <Link href="/cookie-policy" className="hover:text-white transition-colors duration-200">Cookie Policy</Link>
-              <Link href="/data-rights" className="hover:text-white transition-colors duration-200">Do Not Sell My Info</Link>
             </div>
           </div>
         </div>
-      </footer>
-    </main>
+      </section>
+
+      {/* Roles Section */}
+      <section id="roles" className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl sm:text-5xl mb-6 text-gray-900 dark:text-white font-bold">Built for Every Member of the Care Team</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Tailored dashboards and features for parents, teachers, therapists, and administrators.
+            </p>
+          </div>
+
+          {/* Role Tabs */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {roles.map((role) => {
+              const Icon = role.icon
+              return (
+                <button
+                  key={role.id}
+                  onClick={() => setActiveRole(role.id)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full transition ${
+                    activeRole === role.id
+                      ? 'bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-white shadow-lg'
+                      : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                  }`}
+                >
+                  <Icon size={18} />
+                  <span>{role.title}</span>
+                </button>
+              )
+            })}
+          </div>
+
+          {/* Active Role Content */}
+          {roles.map((role) => {
+            const Icon = role.icon
+            return activeRole === role.id ? (
+              <div
+                key={role.id}
+                className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-800/50 rounded-3xl p-8 lg:p-12 border border-gray-200 dark:border-gray-700 shadow-xl"
+              >
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                  <div>
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 via-blue-500 to-teal-500 flex items-center justify-center mb-6 shadow-lg">
+                      <Icon className="text-white" size={32} />
+                    </div>
+                    <h3 className="text-3xl mb-4 text-gray-900 dark:text-white font-bold">{role.title}</h3>
+                    <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">{role.description}</p>
+                    <div className="space-y-3">
+                      {role.features.map((feature) => (
+                        <div key={feature} className="flex items-center gap-3">
+                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                            <Check className="text-white" size={14} />
+                          </div>
+                          <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="aspect-square bg-gradient-to-br from-purple-100 via-blue-100 to-teal-100 dark:from-purple-900/30 dark:via-blue-900/30 dark:to-teal-900/30 rounded-3xl flex items-center justify-center">
+                    <Image
+                      src="/images/ausmo-icon.png"
+                      alt={role.title}
+                      width={256}
+                      height={256}
+                      className="w-64 h-64 object-contain filter drop-shadow-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+            ) : null
+          })}
+        </div>
+      </section>
+
+      {/* Security & Compliance */}
+      <section id="security" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border border-purple-200 dark:border-purple-800 text-sm mb-6">
+              <Shield className="text-green-500" size={16} />
+              <span className="text-gray-700 dark:text-gray-300">Enterprise-grade security</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl mb-6 text-gray-900 dark:text-white font-bold">Trust & Security First</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Built with HIPAA, FERPA, and COPPA compliance in mind, ensuring your data is always protected.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Lock,
+                title: 'Role-Based Access',
+                description: 'Granular permissions ensure each user only sees what they need to.'
+              },
+              {
+                icon: Shield,
+                title: 'Compliance Ready',
+                description: 'HIPAA/FERPA/COPPA-minded architecture with audit logging.'
+              },
+              {
+                icon: Smartphone,
+                title: 'Biometric Auth',
+                description: 'Face ID and Touch ID support for secure, convenient access.'
+              }
+            ].map((item) => {
+              const Icon = item.icon
+              return (
+                <div
+                  key={item.title}
+                  className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center mb-6">
+                    <Icon className="text-white" size={24} />
+                  </div>
+                  <h3 className="text-xl mb-3 text-gray-900 dark:text-white font-bold">{item.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <div>
+            <Image
+              src="/images/ausmo-wordmark.png"
+              alt="Ausmo"
+              width={256}
+              height={76}
+              className="h-16 w-auto mx-auto mb-8"
+              style={{ objectFit: 'contain' }}
+            />
+            <h2 className="text-4xl sm:text-5xl mb-6 text-gray-900 dark:text-white font-bold">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
+              Join thousands of families, educators, and therapists using Ausmo to support children with autism and communication needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button className="group px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500 text-white text-lg hover:shadow-2xl transition flex items-center gap-2">
+                Start Free Trial
+                <ArrowRight className="group-hover:translate-x-1 transition" size={20} />
+              </button>
+              <Link href="/contact-support" className="px-8 py-4 rounded-full bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-lg border-2 border-gray-200 dark:border-gray-700 hover:border-purple-300 dark:hover:border-purple-600 hover:shadow-lg transition">
+                Contact Support
+              </Link>
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-500 mt-8">
+              Free for families • No credit card required • Cancel anytime
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <StandardFooter />
+    </div>
+  )
+}
+
+export default function Home() {
+  return (
+    <ThemeProvider>
+      <AusmoWebsite />
+    </ThemeProvider>
   )
 }

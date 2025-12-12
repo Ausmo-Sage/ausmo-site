@@ -265,6 +265,9 @@ temp/
 # =============================================================================
 # PROJECT SPECIFIC
 # =============================================================================
+# Branding pack (separate git repository)
+branding-pack/
+
 # Keep these files (they're important for the project)
 !package.json
 !package-lock.json

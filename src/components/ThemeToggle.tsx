@@ -2,7 +2,7 @@
 
 import { useTheme } from './ThemeProvider'
 
-export default function ThemeToggle() {
+export function ThemeToggle() {
   const { theme, resolvedTheme, setTheme } = useTheme()
 
   const cycleTheme = () => {
